@@ -16,64 +16,60 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   KEYMAP(KC_Q, KC_W, KC_E, KC_R, KC_T, KC_Y, KC_U, KC_I, KC_O, KC_P, \
          KC_A, KC_S, KC_D, KC_F, KC_G, KC_H, KC_J, KC_K, KC_L, KC_SCLN, \
          KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, \
-         KC_LCTL, KC_TAB, KC_FN13, KC_FN0, KC_BSPC, KC_FN11, KC_FN12,     \
+         KC_TAB, KC_FN9, KC_FN10, KC_FN1, KC_BSPC, KC_FN7, \
          // KC_MINS and KC_LBRC are inverse-dvorakized
-         KC_FN13, KC_FN13, KC_QUOT, KC_LBRC, KC_ESC),                     \
-  /* 1: fn with undvorak-ized punctuation */
+	 KC_FN8, KC_ENT, KC_FN2, KC_QUOT, KC_LBRC, KC_ESC),                     \
+  /* 1: numbers and un-dvoraked symbols */
   KEYMAP(KC_6, KC_7, KC_8, KC_9, KC_0, \
-         SHIFT(KC_LBRC), SHIFT(KC_MINUS), SHIFT(KC_EQUAL), KC_MINUS, KC_EQUAL, \
+         SHIFT(KC_RBRC), SHIFT(KC_MINUS), SHIFT(KC_EQUAL), SHIFT(KC_7), SHIFT(KC_8), \
          KC_1, KC_2, KC_3, KC_4, KC_5, \
-         KC_LBRC, SHIFT(KC_9), SHIFT(KC_0), KC_QUOT, SHIFT(KC_QUOT), \
-         KC_SCLN, KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT, \
+         SHIFT(KC_QUOT), SHIFT(KC_9), SHIFT(KC_0), KC_MINUS, KC_EQUAL, \
+         SHIFT(KC_6), SHIFT(KC_2), SHIFT(KC_3), SHIFT(KC_4), SHIFT(KC_5), \
          SHIFT(KC_1), KC_RBRC, SHIFT(KC_RBRC), SHIFT(KC_BSLS), KC_BSLS, \
-         KC_LCTL, KC_TAB, KC_FN13, KC_FN0, KC_BSPC, KC_FN11, KC_FN12, \
-         KC_SPC, KC_FN13, KC_GRAVE, SHIFT(KC_GRAVE), KC_FN1), \
+         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, \
+	 KC_TRNS, KC_TRNS, KC_TRNS, KC_GRAVE, SHIFT(KC_GRAVE), KC_FN3), \
   /* 2: arrows and function keys */
-  KEYMAP(KC_INS, KC_HOME, KC_UP, KC_END, KC_PGUP, KC_UP, KC_F7, KC_F8, KC_F9, KC_F10, \
-         KC_DEL, KC_LEFT, KC_DOWN, KC_RIGHT, KC_PGDN, KC_DOWN, KC_F4, KC_F5, KC_F6, KC_F11, \
-         KC_FN5, KC_NO, KC_NO, KC_NO, KC_FN3, KC_NO, KC_F1, KC_F2, KC_F3, KC_F12, \
-         KC_NO, KC_FN13, KC_LCTL, KC_FN4, KC_BSPC, KC_FN11, KC_FN12, KC_SPC, KC_FN2, KC_NO, KC_NO, KC_ESC), \
+  KEYMAP(KC_INS, KC_TRNS, KC_UP, KC_TRNS, KC_PGUP, KC_TRNS, KC_F9, KC_F10, KC_F11, KC_F12, \
+         KC_TRNS, KC_LEFT, KC_DOWN, KC_RIGHT, KC_PGDN, KC_TRNS, KC_F5, KC_F6, KC_F7, KC_F8, \
+         KC_TRNS, KC_TRNS, KC_HOME, KC_END, KC_TRNS, KC_TRNS, KC_F1, KC_F2, KC_F3, KC_F4, \
+         SHIFT(KC_TAB), KC_TRNS, KC_TRNS, KC_TRNS, KC_DELETE, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_FN0), \
   /* 3: hard dvorak */
   KEYMAP(KC_QUOT, KC_COMM, KC_DOT, KC_P, KC_Y, KC_F, KC_G, KC_C, KC_R, KC_L, \
          KC_A, KC_O, KC_E, KC_U, KC_I, KC_D, KC_H, KC_T, KC_N, KC_S, \
          KC_SCLN, KC_Q, KC_J, KC_K, KC_X, KC_B, KC_M, KC_W, KC_V, KC_Z, \
-         KC_LCTL, KC_TAB, KC_FN13, KC_FN6, KC_BSPC, KC_FN11, KC_FN12,     \
-         KC_SPC, KC_FN6, KC_MINS, KC_QUOT, KC_ESC),                   \
+         KC_TRNS, KC_TRNS, KC_TRNS, KC_FN4, KC_BSPC, KC_TRNS, \
+	 KC_TRNS, KC_TRNS, KC_FN5, KC_MINS, KC_SLASH, KC_ESC), \
 
-  /* 4: hard dvorak fn */
+  /* 4: hard dvorak symbols & numbers */
   KEYMAP(KC_6, KC_7, KC_8, KC_9, KC_0, \
-         SHIFT(KC_SLASH), SHIFT(KC_LBRC), SHIFT(KC_RBRC), KC_LBRC, KC_RBRC, \
+	 SHIFT(KC_SLASH), SHIFT(KC_LBRC), SHIFT(KC_RBRC), SHIFT(KC_7), SHIFT(KC_8), \
          KC_1, KC_2, KC_3, KC_4, KC_5, \
-         KC_SLASH, SHIFT(KC_9), SHIFT(KC_0), KC_MINUS, SHIFT(KC_MINUS), \
-         KC_SCLN, KC_LEFT, KC_DOWN, KC_UP, KC_RIGHT, \
+	 KC_MINUS, SHIFT(KC_9), SHIFT(KC_0), KC_LBRC, KC_RBRC, \ 
+         SHIFT(KC_6), SHIFT(KC_2), SHIFT(KC_3), SHIFT(KC_4), SHIFT(KC_5), \
          SHIFT(KC_1), KC_EQUAL, SHIFT(KC_EQUAL), SHIFT(KC_BSLS), KC_BSLS, \
-         KC_LCTL, KC_TAB, KC_FN13, KC_FN6, KC_BSPC, KC_FN11, KC_FN12, \
-         KC_SPC, KC_FN13, KC_GRAVE, SHIFT(KC_GRAVE), KC_FN7), \
+         KC_TRNS, KC_TRNS, KC_TRNS, KC_FN4, KC_TRNS, KC_TRNS, \
+	 KC_TRNS, KC_TRNS, KC_FN5, KC_GRAVE, SHIFT(KC_GRAVE), KC_FN6), \
 
-  /* 5: hard dvorak L2 */
-  KEYMAP(KC_INS, KC_HOME, KC_UP, KC_END, KC_PGUP, KC_UP, KC_F7, KC_F8, KC_F9, KC_F10, \
-         KC_DEL, KC_LEFT, KC_DOWN, KC_RIGHT, KC_PGDN, KC_DOWN, KC_F4, KC_F5, KC_F6, KC_F11, \
-         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_F1, KC_F2, KC_F3, KC_F12, \
-         KC_NO, KC_NO, KC_LCTL, KC_FN13, KC_BSPC, KC_FN11, KC_FN12, KC_SPC, KC_FN8, KC_NO, KC_NO, KC_FN10)
+  /* 5: hard dvorak navigation and function keys */
+  KEYMAP(KC_INS, KC_TRNS, KC_UP, KC_TRNS, KC_PGUP, KC_TRNS, KC_F9, KC_F10, KC_F11, KC_F12, \
+         KC_TRNS, KC_LEFT, KC_DOWN, KC_RIGHT, KC_PGDN, KC_TRNS, KC_F5, KC_F6, KC_F7, KC_F8, \
+         KC_TRNS, KC_TRNS, KC_HOME, KC_END, KC_TRNS, KC_TRNS, KC_F1, KC_F2, KC_F3, KC_F4, \
+         SHIFT(KC_TAB), KC_TRNS, KC_TRNS, KC_TRNS, KC_DELETE, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_FN0) 
 };
 
   const uint16_t PROGMEM fn_actions[] = {
-  [0] = ACTION_LAYER_TAP_KEY(1, KC_ESC),  // to Fn overlay
-  [1] = ACTION_LAYER_ON(2, 1),  // switch to layer 2
-  [2] = ACTION_LAYER_OFF(2, 1),  // switch back to layer 0
-  [3] = ACTION_FUNCTION(BOOTLOADER),
-  [4] = ACTION_LAYER_MOMENTARY(2),  // to Fn overlay
+  [0] = ACTION_FUNCTION(BOOTLOADER),
+  [1] = ACTION_LAYER_TAP_KEY(1, KC_SPC),  // to layer 1 while held, space when tapped
+  [2] = ACTION_LAYER_TAP_KEY(2, KC_SPC),  // to layer 2 while held, space when tapped
+  [3] = ACTION_LAYER_ON(3, 1),  // to hard dvorak
+  [4] = ACTION_LAYER_TAP_KEY(4, KC_SPC),  // to hard dvorak's fn
+  [5] = ACTION_LAYER_TAP_KEY(5, KC_SPC),  // switch to layer 2 hard
+  [6] = ACTION_LAYER_OFF(3, 1), // to soft dvorak
 
-  [5] = ACTION_LAYER_ON(3, 1),  // to hard dvorak
-  [6] = ACTION_LAYER_TAP_KEY(4, KC_ESC),  // to hard dvorak's fn
-  [7] = ACTION_LAYER_ON(5, 1),  // switch to layer 2 hard
-  [8] = ACTION_LAYER_OFF(5, 1),  // switch back to layer 0 hard
-  [9] = ACTION_LAYER_MOMENTARY(4),  // to Fn overlay
-  [10] = ACTION_LAYER_OFF(3, 1),
-
-  [11] = ACTION_MODS_TAP_KEY(MOD_LALT, KC_DELETE),
-  [12] = ACTION_MODS_TAP_KEY(MOD_LGUI, KC_ENT),
-  [13] = ACTION_MODS_TAP_KEY(MOD_LSFT, KC_SPC),
+  [7] = ACTION_MODS_TAP_KEY(MOD_LALT, KC_DELETE),
+  [8] = ACTION_MODS_TAP_KEY(MOD_LGUI, KC_ENT),
+  [9] = ACTION_MODS_TAP_KEY(MOD_LCTL, KC_SPC),
+  [10] = ACTION_MODS_TAP_KEY(MOD_LSFT, KC_SPC),
   };
 
   void action_function(keyrecord_t *record, uint8_t id, uint8_t opt)
