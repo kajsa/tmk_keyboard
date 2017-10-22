@@ -21,7 +21,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
          KC_Z, KC_X, KC_C, KC_V, KC_B, KC_N, KC_M, KC_COMM, KC_DOT, KC_SLSH, \
          KC_TAB, KC_FN9, KC_FN10, KC_FN1, KC_BSPC, KC_FN7, \
          // KC_MINS and KC_LBRC are inverse-dvorakized
-	 KC_FN8, KC_FN11, KC_FN2, KC_QUOT, KC_LBRC, KC_ESC), \
+	 KC_FN8, KC_FN10, KC_FN2, KC_QUOT, KC_LBRC, KC_ESC), \
   /* 1: numbers and un-dvoraked symbols */
   KEYMAP(KC_6, KC_7, KC_8, KC_9, KC_0, \
          SHIFT(KC_RBRC), SHIFT(KC_MINUS), SHIFT(KC_EQUAL), SHIFT(KC_7), SHIFT(KC_8), \
@@ -69,11 +69,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [5] = ACTION_LAYER_TAP_KEY(5, KC_SPC),  // switch to layer 2 hard
   [6] = ACTION_LAYER_OFF(3, 1), // to soft dvorak
 
-  [7] = ACTION_MODS_TAP_KEY(MOD_LALT, KC_DELETE),
-  [8] = ACTION_MODS_TAP_KEY(MOD_LCTL, KC_ENT),
+  [7] = ACTION_MODS_TAP_KEY(MOD_LCTL, KC_DELETE),
+  [8] = ACTION_MODS_TAP_KEY(MOD_LALT, KC_ENT),
   [9] = ACTION_MODS_TAP_KEY(MOD_LGUI, KC_SPC),
-  [10] = ACTION_MODS_ONESHOT(MOD_LSFT),
-  [11] = ACTION_MODS_TAP_KEY(MOD_LSFT, KC_ENT),
+  [10] = ACTION_MODS_TAP_KEY(MOD_LSFT, KC_SPC),
   };
 
   void action_function(keyrecord_t *record, uint8_t id, uint8_t opt)
